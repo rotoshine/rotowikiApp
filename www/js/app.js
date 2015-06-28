@@ -20,7 +20,9 @@ angular.module('rotowiki', ['ionic', 'rotowiki.controllers', 'rotowiki.services'
     }
   });
 })
-
+.config(['$ionicConfigProvider', function($ionicConfigProvider) {
+  $ionicConfigProvider.tabs.position('bottom'); // other values: top
+}])
 .config(function($stateProvider, $urlRouterProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
