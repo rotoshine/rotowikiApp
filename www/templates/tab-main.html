@@ -1,0 +1,20 @@
+<ion-view view-title="메인">
+  <ion-nav-buttons side="right">
+    <button class="button icon ion-ios-shuffle-strong" ng-click="randomDocument()"></button>
+  </ion-nav-buttons>
+  <ion-content class="padding">
+    <h1 class="title">최근 수정된 문서</h1>
+    <div class="card" ng-repeat="document in latestUpdatedDocuments">
+      <div class="item item-text-wrap">
+        <h2>{{document.title}}</h2>
+        {{document.contentPreview}}
+        <a class="button button-block button-dark" href="/#/tab/documents/{{document.title}}">문서 읽기</a>
+      </div>
+    </div>
+    <ion-infinite-scroll
+      ng-if="hasMoreDocument"
+      on-infinite="loadNextDocuments()"
+      distance="1%">
+    </ion-infinite-scroll>
+  </ion-content>
+</ion-view>

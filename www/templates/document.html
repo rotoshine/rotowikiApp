@@ -1,0 +1,15 @@
+<ion-view view-title="{{document.title}}">
+  <ion-nav-buttons side="right">
+    <button class="button icon ion-ios-shuffle-strong" ng-click="randomDocument()"></button>
+  </ion-nav-buttons>
+  <ion-content class="padding">
+    <h1>{{document.title}}</h1>
+    <p ng-bind-html="document.content"></p>
+    <div class="list" ng-show="document.subDocuments.length > 0">
+      <div class="item item-divider">
+        하위 문서
+      </div>
+      <a class="item" ng-repeat="subDocument in document.subDocuments" href="/#/tab/documents/{{subDocument.title}}">{{subDocument.title}}</a>
+    </div>
+  </ion-content>
+</ion-view>

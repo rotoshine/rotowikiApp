@@ -1,0 +1,20 @@
+<ion-view view-title="문서목록">
+  <ion-nav-buttons side="right">
+    <button class="button icon ion-ios-shuffle-strong" ng-click="randomDocument()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <h3 class="title">최근 수정된 문서들</h3>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
