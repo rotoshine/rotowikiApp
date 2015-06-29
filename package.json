@@ -1,7 +1,7 @@
 {
   "name": "rotowikiapp",
-  "version": "1.0.0",
-  "description": "rotowikiApp: An Ionic project",
+  "version": "0.0.1",
+  "description": "ionic으로 개발된 로토위키 앱",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^1.3.3",
@@ -22,6 +22,7 @@
     "com.ionic.keyboard"
   ],
   "cordovaPlatforms": [
-    "android"
+    "android",
+    "ios"
   ]
 }
